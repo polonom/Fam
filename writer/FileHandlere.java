@@ -1,6 +1,7 @@
+package writer;
 import java.io.*;
 
-public class FileHandler implements Saviable{
+public class FileHandlere implements Saviable{
 
     public boolean save(Serializable serializable, String filePath){
         try(ObjectOutputStream objectOutputStream = new ObjectOutputStream( new FileOutputStream(filePath))) {
