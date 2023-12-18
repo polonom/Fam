@@ -1,9 +1,8 @@
+package familyTree.Human_;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
-
-import Human.Gender;
 
 public class Human {
 

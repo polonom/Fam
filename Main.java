@@ -1,9 +1,12 @@
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.time.LocalDate;
-import java.util.logging.FileHandler;
-import Human.Gender;
-import java.util.logging.FileHandler;
+
+import familyTree.FamilyTree;
+import familyTree.Human_.Gender;
+import familyTree.Human_.Human;
+import writer.FileHandlere;
+
 
 public class Main {
     public static void main(String[] args){
@@ -23,13 +26,13 @@ public class Main {
 
     public static FamilyTree load(){
         String filePath = "/Users/polinakivokurtseva/Git/Fam/write /write";
-        FileHandler fileHandler = new FileHandler();
+        FileHandlere fileHandler = new FileHandlere();
         return (FamilyTree) fileHandler.read(filePath);
     }
 
     public static void save(FamilyTree tree){
         String filePath = "/Users/polinakivokurtseva/Git/Fam/write /write";
-        FileHandler fileHandler = new FileHandler();
+        FileHandlere fileHandler = new FileHandlere();
         fileHandler.save(tree, filePath);
     }
 }
