@@ -1,12 +1,11 @@
-package familyTree;
+package model.familyTree.tree;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
-import java.util.jar.Attributes.Name;
 
-import familyTree.Human_.Human;
+
+
 
 
 public class FamilyTree<E extends TreeNode<E>> implements Serializable, Iterable<E>{
@@ -119,11 +118,11 @@ public class FamilyTree<E extends TreeNode<E>> implements Serializable, Iterable
     }
 
     public void sortByName(){
-        humanList.sort( new HumanComparatorByName());
+        humanList.sort( new FamComparatorByName());
     }
 
     public void sortByBirthDate(){
-        humanList.sort( new HumanComparatorByBirtyDate());
+        humanList.sort( new FamComparatorByBirtyDate());
     }
 
 

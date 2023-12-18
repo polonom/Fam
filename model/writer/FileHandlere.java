@@ -1,4 +1,4 @@
-package writer;
+package model.writer;
 import java.io.*;
 
 public class FileHandlere implements Saviable{
