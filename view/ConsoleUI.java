@@ -2,6 +2,7 @@ package view;
 
 import java.util.Scanner;
 
+import model.familyTree.tree.FamilyTree;
 import presentor.Presentor;
 
 public class ConsoleUI implements View {
@@ -61,6 +62,27 @@ public class ConsoleUI implements View {
                 int idMother = Integer.parseInt(scanner.nextLine());
                 presentor.addHuman(name,gender,birthDate,idFather,idMother);
     }
+
+    public void addParent1(){
+        System.out.println("Enter name");
+                String name = scanner.nextLine();
+                System.out.println("Enter birth date");
+                String birthDate = scanner.nextLine();
+                System.out.println("Enter gender");
+                String gender = scanner.nextLine();
+                presentor.addToParents(name,gender,birthDate);
+    }
+
+    public void addChild1(){
+        System.out.println("Enter name");
+                String name = scanner.nextLine();
+                System.out.println("Enter birth date");
+                String birthDate = scanner.nextLine();
+                System.out.println("Enter gender");
+                String gender = scanner.nextLine();
+                presentor.addToChildren(name,gender,birthDate);
+    }
+
 
    
 

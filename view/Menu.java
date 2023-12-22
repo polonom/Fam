@@ -3,7 +3,9 @@ package view;
 import java.util.ArrayList;
 import java.util.List;
 
+import view.commands.AddChildren;
 import view.commands.AddHuman;
+import view.commands.AddParents;
 import view.commands.Command;
 import view.commands.GetHumanListInfo;
 import view.commands.SortByBirthDate;
@@ -20,6 +22,9 @@ public class Menu {
         commands.add(new SortByBirthDate(consoleUI));
         commands.add(new SortByName(consoleUI));
         commands.add(new GetHumanListInfo(consoleUI));
+        commands.add(new AddParents(consoleUI));
+        commands.add(new AddChildren(consoleUI));
+        
     }
 
     public String menu1(){

@@ -1,5 +1,6 @@
 package model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import model.familyTree.Human_.Gender;
@@ -31,6 +32,25 @@ public class FamTreeService {
     public String getHumanList() {
         return activeTree.getInfo();
     }
+
+    public void addToParents(String name, String genderString, String birthDate){
+        Gender gender = Gender.valueOf(genderString);
+        LocalDate humanBirthDate = LocalDate.parse(birthDate);
+        Human human = new Human(name, gender, humanBirthDate);
+        activeTree.addToParents(human);
+    }
+
+    public void addToChildren(String name, String genderString, String birthDate){
+        Gender gender = Gender.valueOf(genderString);
+        LocalDate humanBirthDate = LocalDate.parse(birthDate);
+        Human human = new Human(name, gender, humanBirthDate);
+        activeTree.addToChildren(human);
+    }
+
+    public void save(Serializable serializable, String filePath){
+        save(activeTree, filePath);
+    }
+
 }
     
 

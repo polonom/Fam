@@ -1,5 +1,8 @@
 package presentor;
+import java.io.Serializable;
+
 import model.FamTreeService;
+import model.familyTree.Human_.Human;
 import view.View;
 
 public class Presentor {
@@ -28,4 +31,15 @@ public class Presentor {
     public void sortByBirthDate1(){
         service.sortByBirthDate();
     }
-}
+
+    public void addToParents(String name, String gender, String birthDate){
+        service.addToParents(name, gender, birthDate);
+    }
+
+    public void addToChildren(String name, String gender, String birthDate){
+        service.addToChildren(name, gender, birthDate);
+    }
+
+    public void save(Serializable serializable, String filePath){
+        save(serializable, filePath);
+    }

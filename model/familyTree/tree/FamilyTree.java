@@ -31,12 +31,12 @@ public class FamilyTree<E extends TreeNode<E>> implements Serializable, Iterable
         return false;
     }
 
-    private void addToParents(E human){
+    public void addToParents(E human){
         for (E parent: human.getParents()){
             parent.addChild(human);
         }
     }
-    private void addToChildren(E human){
+    public void addToChildren(E human){
         for (E parent: human.getChildren()){
             parent.addParent(human);
         }
