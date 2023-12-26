@@ -1,4 +1,4 @@
-package familyTree.Human_;
+package model.familyTree.Human_;
 
 public enum Gender {
     Male, Female;

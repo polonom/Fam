@@ -2,14 +2,20 @@ import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.time.LocalDate;
 
-import familyTree.FamilyTree;
-import familyTree.Human_.Gender;
-import familyTree.Human_.Human;
-import writer.FileHandlere;
+import javax.swing.text.View;
+
+import model.familyTree.Human_.Gender;
+import model.familyTree.Human_.Human;
+import model.familyTree.tree.FamilyTree;
+import model.writer.FileHandlere;
+import view.ConsoleUI;
 
 
 public class Main {
     public static void main(String[] args){
+
+        ConsoleUI view= new ConsoleUI();
+        view.start();
 
         FamilyTree tree = testTree();
         System.out.println(tree);
