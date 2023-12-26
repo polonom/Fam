@@ -20,8 +20,37 @@ public class ConsoleUI implements View {
     }
 
     public void start(){
+        System.out.println("Hi.Choose what do u want to do with a family tree");
+        System.out.println("1.Add Human");
+        System.out.println("2.Sort By Birth Date");
+        System.out.println("3.Sort By Name");
+        System.out.println("4. Get list of humans");
+        System.out.println("5.Add parant");
+        System.out.println("6.Add children");
         String choice = scanner.nextLine();
+        switch (choice) {
+            case "1":
+                addParent1();
+                break;
+            case "2":
+                sortByBirthDate();
+                break;
+            case "3":
+                sortByName();
+                break;
+            case "4":
+                getHumanList();
+                break;
+            case "5":
+                addParent1();
+                break;
+            case "6":
+                addChild1();
+                break;
 
+            default:
+                break;
+        }
     }
     
      private void finish() {
@@ -81,6 +110,9 @@ public class ConsoleUI implements View {
                 System.out.println("Enter gender");
                 String gender = scanner.nextLine();
                 presentor.addToChildren(name,gender,birthDate);
+    }
+
+    public void save() {
     }
 
 

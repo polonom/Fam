@@ -2,6 +2,7 @@ package model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.logging.FileHandler;
 
 import model.familyTree.Human_.Gender;
 import model.familyTree.Human_.Human;
@@ -9,6 +10,7 @@ import model.familyTree.tree.FamilyTree;
 
 public class FamTreeService {
     private FamilyTree<Human> activeTree;
+    private FileHandler file;
 
     public String addHuman(String name, String genderString, String birthDate,
                            long idFather, long idMother){
@@ -48,7 +50,7 @@ public class FamTreeService {
     }
 
     public void save(Serializable serializable, String filePath){
-        save(activeTree, filePath);
+         file.save(file, filePath);
     }
 
 }

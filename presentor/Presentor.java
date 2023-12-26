@@ -1,5 +1,6 @@
 package presentor;
 import java.io.Serializable;
+import java.util.logging.FileHandler;
 
 import model.FamTreeService;
 import model.familyTree.Human_.Human;
@@ -8,6 +9,8 @@ import view.View;
 public class Presentor {
     private View view;
     private FamTreeService service;
+    private FileHandler fileHandler;
+
 
     public Presentor(View view) {
         service = new FamTreeService();
@@ -41,5 +44,6 @@ public class Presentor {
     }
 
     public void save(Serializable serializable, String filePath){
-        save(serializable, filePath);
+        service.save(serializable, filePath);
     }
+}
